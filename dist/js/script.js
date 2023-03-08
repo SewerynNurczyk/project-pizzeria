@@ -387,6 +387,7 @@
       thisCartProduct.params = menuProduct.params;
 
       thisCartProduct.getElements(element);
+      thisCartProduct.initAmountWidget();
     }
 
     getElements(element) {
@@ -402,7 +403,15 @@
 
     }
 
-
+    initAmountWidget(){
+      const thisCartProduct = this;
+      thisCartProduct.amountWidget = new AmountWidget(thisCartProduct.dom.amountWidget);
+      thisCartProduct.dom.amountWidget.addEventListener('Updated', function(){
+        thisCartProduct.amount = thisCartProduct.amountWidget.value;
+        thisCartProduct.price = thisCartProduct.amount * thisCartProduct.priceSingle;
+        thisCartProduct.dom.price.innerHTML = thisCartProduct.price;
+      });
+    }
   }
 
   const app = {
