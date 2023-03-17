@@ -39,7 +39,6 @@ class Product {
         thisProduct.imageWrapper = thisProduct.element.querySelector(select.menuProduct.imageWrapper);
         thisProduct.amountWidgetElem = thisProduct.element.querySelector(select.menuProduct.amountWidget);
     }
-
     initAccordion() {
         const thisProduct = this;
         /* START: add event listener to clickable trigger on event click */
@@ -122,7 +121,6 @@ class Product {
         // update calculated price in the HTML
         thisProduct.priceElem.innerHTML = price;
     }
-
     initAmountWidget() {
         const thisProduct = this;
 
@@ -134,18 +132,17 @@ class Product {
     addToCart() {
         const thisProduct = this;
 
-       // app.cart.add(thisProduct.prepareCartProduct());
+        // app.cart.add(thisProduct.prepareCartProduct());
 
         const event = new CustomEvent('add-to-cart', {
             bubbles: true,
             detail: {
-                product: thisProduct,
+                product: thisProduct.prepareCartProduct()
             },
         });
 
         thisProduct.element.dispatchEvent(event);
     }
-
     prepareCartProduct() {
         const thisProduct = this;
 
@@ -161,7 +158,6 @@ class Product {
         };
         return productSummary;
     }
-
     prepareCartProductParams() {
         const thisProduct = this;
 

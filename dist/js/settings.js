@@ -116,16 +116,16 @@ export const settings = {
     },
     db: {
         url: '//localhost:3131',
-        product: 'product',
-        order: 'order',
-        booking: 'booking',
-        event: 'event',
+        product: 'products',
+        order: 'orders',
+        booking: 'bookings',
+        event: 'events',
         dateStartParamKey: 'date_gte',
         dateEndParamKey: 'date_lte',
         notRepeatParam: 'repeat=false',
         repeatParam: 'repeat_ne=false',
     },
-  };
+};
 
 export const templates = {
     menuProduct: Handlebars.compile(document.querySelector(select.templateOf.menuProduct).innerHTML),
