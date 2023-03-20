@@ -106,9 +106,9 @@ const app = {
 
   init: function () {
     const thisApp = this;
-    thisApp.initData(),
-    thisApp.initCart(),
-    thisApp.initPages(),
+    thisApp.initData();
+    thisApp.initCart();
+    thisApp.initPages();
     thisApp.initBooking();
   },
 };
