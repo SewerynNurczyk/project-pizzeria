@@ -38,7 +38,7 @@ class BaseWidget {
     thisWidget.announce();
   }
 
-  setValue(value){
+  setValue(value) {
     const thisWidget = this;
 
     thisWidget.value = value;

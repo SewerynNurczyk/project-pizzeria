@@ -45,7 +45,7 @@ class Booking {
                                      + '?' + params.eventsRepeat.join('&'),
     };
 
-     Promise.all([
+    Promise.all([
       fetch(urls.booking),
       fetch(urls.eventsCurrent),
       fetch(urls.eventsRepeat),
