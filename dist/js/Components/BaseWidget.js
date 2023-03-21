@@ -1,4 +1,4 @@
-import { settings } from '../settings.js';
+//import { settings } from '../settings.js';
 
 class BaseWidget {
   constructor(wrapperElement, initialValue) {
@@ -19,25 +19,17 @@ class BaseWidget {
   set value(value) {
     const thisWidget = this;
 
-    const newValue = parseInt(value);
-
-    const minValue = settings.amountWidget.defaultMin;
-    const maxValue = settings.amountWidget.defaultMax;
+    const newValue = thisWidget.parseValue(value);
 
     /* TODO: Add validation */
-    if (thisWidget.correctValue !== newValue && !isNaN(newValue)) {
+    if (newValue != thisWidget.correctValue && thisWidget.isValid(newValue)) {
       thisWidget.correctValue = newValue;
+    
+      thisWidget.announce();
     }
-    if (thisWidget.correctValue < minValue) {
-      thisWidget.correctValue = minValue;
-    }
-    if (thisWidget.correctValue > maxValue) {
-      thisWidget.correctValue = maxValue + 1;
-    }
-    thisWidget.renderValue();
-    thisWidget.announce();
+      thisWidget.renderValue();
+    
   }
-
   setValue(value) {
     const thisWidget = this;
 
@@ -57,7 +49,7 @@ class BaseWidget {
   renderValue() {
     const thisWidget = this;
 
-    thisWidget.dom.wrapper.value = thisWidget.correctValue;
+    thisWidget.dom.wrapper.innerHTML = thisWidget.value;
   }
 
   announce() {
