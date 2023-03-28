@@ -97,18 +97,19 @@ const app = {
     });
   },
 
-  initBooking: function (){
+  initBooking: function(){
     const thisApp = this;
 
-    thisApp.bookingElem = document.querySelector(select.containerOf.booking);
-    thisApp.booking = new Booking(thisApp.bookingElem);
+    thisApp.bookingCntr = document.querySelector(select.containerOf.booking);
+    thisApp.booking = new Booking(thisApp.bookingCntr);
+
   },
 
   init: function () {
     const thisApp = this;
+    thisApp.initPages();
     thisApp.initData();
     thisApp.initCart();
-    thisApp.initPages();
     thisApp.initBooking();
   },
 };
