@@ -230,6 +230,11 @@ class Booking {
       console.log(event.target);
       console.log(thisBooking.selectedTable);
     });
+    thisBooking.dom.orderButton.addEventListener('click', function(event){
+      event.preventDefault();
+      thisBooking.sendBooking();
+    });
+    
   }
   sendBooking(){
     const thisBooking = this;

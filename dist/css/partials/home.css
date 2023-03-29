@@ -1,0 +1,139 @@
+.home-style {
+  margin: 42px auto;
+  padding: 72px 48px;
+  background: #fff;
+  border-bottom: 1px solid #a6a6a6;
+  border-radius: 4px;
+}
+
+.box-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 600px;
+}
+
+.box {
+  border-radius: 4px;
+  height: 120px;
+  align-items: center;
+}
+.box h2 {
+  top: -95px;
+  left: 80px;
+  position: relative;
+  z-index: 15;
+  color: #fff;
+}
+.box h2:hover {
+  transform: scale(1.2);
+  text-decoration: underline;
+  color: #ff6b6b;
+}
+.box a {
+  text-decoration: none;
+}
+
+.order {
+  object-fit: cover;
+  width: 50%;
+}
+.order img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.booking {
+  width: 50%;
+}
+.booking img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.large {
+  width: 100%;
+  background-color: #ff6b6b;
+}
+.large h1 {
+  color: #fff;
+  position: relative;
+  left: 35%;
+  text-align: justify;
+}
+.large h5 {
+  color: #fff;
+  position: relative;
+  left: 33%;
+  text-align: justify;
+}
+
+.main-carousel {
+  width: 700px;
+  height: 250px;
+  margin: 20px, auto;
+  margin-top: 50px;
+}
+
+.carousel-cell {
+  height: 100%;
+  display: flex;
+}
+.carousel-cell .img-wrapper {
+  height: 200px;
+  width: 30%;
+}
+.carousel-cell .img-wrapper img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.carousel-cell .quote {
+  height: 200px;
+  width: 70%;
+  margin-left: 30px;
+}
+
+.gallery {
+  max-width: 100%;
+  max-height: 400px;
+  margin-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.gallery .image {
+  position: relative;
+  width: 180px;
+  height: 150px;
+  margin-bottom: 10px;
+}
+.gallery .image:hover {
+  background: grey;
+  opacity: 0.7;
+  transition: 0.5s linear;
+}
+.gallery .image:hover .fa-solid {
+  color: #ff6b6b;
+  display: block;
+  transition: 2s linear;
+}
+.gallery .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.footer {
+  margin-top: 35px;
+}
+.footer .instagram {
+  color: #e55039;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=home.css.map */
