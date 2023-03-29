@@ -10,7 +10,7 @@ export const select = {
     cart: '#cart',
     pages: '#pages',
     booking: '.booking-wrapper',
-    homePage: '.home-style',
+    homePage: '.home-page',
   },
   all: {
     menuProducts: '#product-list > .product',
@@ -73,6 +73,11 @@ export const select = {
     price: '.cart__product-price',
     edit: '[href="#edit"]',
     remove: '[href="#remove"]',
+  },
+  homePage: {
+    boxWrapper: '.box-wrapper',
+    box: '.box',
+    links: '.box a',
   },
   // CODE ADDED END
 };

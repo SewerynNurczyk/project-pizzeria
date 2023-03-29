@@ -1,6 +1,6 @@
-/*import {select, templates} from '../settings.js';
-import {utils} from '../utils.js';
-import {app} from '../app.js';
+import {select, templates} from '../settings.js';
+import utils from '../utils.js';
+import app from '../app.js';
 
 class Home {
   constructor(element){
@@ -31,4 +31,4 @@ class Home {
   }
 }
 
-export default Home;*/
+export default Home;

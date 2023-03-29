@@ -2,7 +2,7 @@ import { settings, select, classNames } from './settings.js';
 import Product from './components/Product.js';
 import Cart from './components/Cart.js';
 import Booking from './components/Booking.js';
-/*import Home from './components/Home.js';*/
+import Home from './components/Home.js';
 
 const app = {
   initPages: function () {
@@ -12,12 +12,12 @@ const app = {
 
     thisApp.navLinks = document.querySelectorAll(select.nav.links);
 
-    const idFromHash = window.location.hash.replace('#/', '');
+    const IDFromHash = window.location.hash.replace('#/', '');
 
     let pageMatchingHash = thisApp.pages[0].id;
 
     for (let page of thisApp.pages) {
-      if (page.id == idFromHash) {
+      if (page.id == IDFromHash) {
         pageMatchingHash = page.id;
         break;
       }
@@ -101,17 +101,17 @@ const app = {
   initBooking: function(){
     const thisApp = this;
 
-    thisApp.bookingCntr = document.querySelector(select.containerOf.booking);
-    thisApp.booking = new Booking(thisApp.bookingCntr);
+    thisApp.BookingElem = document.querySelector(select.containerOf.booking);
+    thisApp.booking = new Booking(thisApp.BookingElem);
 
   },
 
-  /* initHome: function(){
+  initHome: function(){
     const thisApp = this;
     const HomeElem = document.querySelector(select.containerOf.homePage);
     thisApp.homePage = new Home(HomeElem);
-  },*/
-  /*Flickity: function(){
+  },
+  Flickity: function(){
     const thisApp = this;
     const elem = document.querySelector('.main-carousel');
     const flick = new Flickity(elem, {
@@ -122,7 +122,7 @@ const app = {
       autoPlay: true,
       imagesLoaded: true,
     });
-  },*/
+  },
 
   init: function () {
     const thisApp = this;
@@ -130,8 +130,8 @@ const app = {
     thisApp.initData();
     thisApp.initCart();
     thisApp.initBooking();
-    /*thisApp.initHome();
-    thisApp.Flickity();*/
+    thisApp.initHome();
+    thisApp.Flickity();
   },
 };
 
