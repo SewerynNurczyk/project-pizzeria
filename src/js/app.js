@@ -1,10 +1,13 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+
 import { settings, select, classNames } from './settings.js';
 import Product from './components/Product.js';
 import Cart from './components/Cart.js';
 import Booking from './components/Booking.js';
 import Home from './components/Home.js';
 
-const app = {
+export const app = {
   initPages: function () {
     const thisApp = this;
 
@@ -98,7 +101,7 @@ const app = {
     });
   },
 
-  initBooking: function(){
+  initBooking: function () {
     const thisApp = this;
 
     thisApp.BookingElem = document.querySelector(select.containerOf.booking);
@@ -106,12 +109,12 @@ const app = {
 
   },
 
-  initHome: function(){
+  initHome: function () {
     const thisApp = this;
     const HomeElem = document.querySelector(select.containerOf.homePage);
     thisApp.homePage = new Home(HomeElem);
   },
-  Flickity: function(){
+  Flickity: function () {
     const thisApp = this;
     const elem = document.querySelector('.main-carousel');
     const flick = new Flickity(elem, {
