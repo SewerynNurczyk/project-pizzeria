@@ -132,7 +132,7 @@ $color-danger: #e55039;
     height: 150px;
     margin-bottom: 40px;
     transition: 0.5s linear;
-   
+
     .ikons {
       position: absolute;
       top: 50%;
@@ -140,13 +140,15 @@ $color-danger: #e55039;
       transform: translate(-50%, -50%);
       font-size: 2em;
     }
+
     .fa-solid {
       transition: 1s linear;
     }
+
     &:hover {
       background: grey;
       opacity: 0.7;
-      
+
 
       .fa-solid {
         color: $color-main;
